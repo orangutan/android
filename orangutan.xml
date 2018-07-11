@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- for fdroid previledge extension
+  <project path="packages/apps/FDroidPrivilegedExtension" name="privileged-extension.git" remote="fdroid" revision="refs/tags/0.2" />
+  -->
+  <!--
+  <remote name="fdroid" fetch="https://gitlab.com/fdroid/" />
+  <project path="packages/apps/FDroidPrivilegedExtension" name="privileged-extension.git" remote="fdroid" revision="master" />
+  -->
+
+  <!--
+  <project path="packages/apps/YalpStore" name="yeriomin/YalpStore" remote="github" revision="master" />
+  -->
+
+  <!-- junk projects, like for mac etc. -->
+  <remove-project name="platform/prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9"/>
+  <remove-project name="platform/prebuilts/gcc/darwin-x86/arm/arm-eabi-4.8"/>
+  <remove-project name="platform/prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9"/>
+  <remove-project name="platform/prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1"/>
+  <remove-project name="platform/prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.9"/>
+  <remove-project name="platform/prebuilts/gdb/darwin-x86"/>
+  <remove-project name="platform/prebuilts/go/darwin-x86"/>
+  <remove-project name="platform/prebuilts/python/darwin-x86/2.7.5"/>
+
+  <!-- device specific projects -->
+
+
+  <!-- to use the gzosp device config or validus 
+  <project path="device/motorola/sanders" name="Keertesh19/device_motorola_sanders" remote="github" revision="oreo"/>
+  <project path="device/motorola/sanders" name="GZOSP-Devices/device_motorola_sanders" remote="github" revision="8.1"/>
+
+
+  to use validus vendor instead of lineage vendor
+  <project path="vendor/validus" name="ValidusOs/vendor_validus" remote="github" revision="8.1" />
+  -->
+
+  <project path="device/motorola/sanders" name="orangutan/device_motorola_sanders" remote="github" revision="8.1" />
+  <project path="vendor/motorola/sanders" name="orangutan/vendor_motorola_sanders" remote="github" revision="8.1" />
+  <project path="kernel/motorola/msm8953" name="orangutan/kernel_motorola_msm8953_sanders" remote="github" revision="8.1-ods" />
+
+  <!-- additional packages required. -->
+
+  <project path="packages/resources/devicesettings" name="LineageOS/android_packages_resources_devicesettings" remote="github" revision="lineage-15.1" />
+
+  <!-- lets try to build our own twrp recovery
+  <remove-project name="LineageOS/android_bootable_recovery" />
+  -->
+  <project path="bootable/recovery-twrp" name="orangutan/android_bootable_recovery" remote="github" revision="android-8.1" />
+  
+  <!-- add wireguard vpn support -->
+  <remote name="zx2c4" fetch="https://git.zx2c4.com/" />
+  <project remote="zx2c4" name="android_kernel_wireguard" path="kernel/wireguard" revision="master" sync-s="true" />
+
+  <!-- packages not required -->
+
+  <!-- get rid of messaging, we use silence -->
+  <remove-project name="LineageOS/android_packages_apps_Messaging"/>
+  <!-- use etar for calendar -->
+  <remove-project name="LineageOS/android_packages_apps_Calendar"/>
+  <!-- use open camera -->
+  <remove-project name="LineageOS/android_packages_apps_Camera2"/>
+  <!-- use simple gallery -->
+  <remove-project name="LineageOS/android_packages_apps_Gallery2"/>
+  <!-- use other email -->
+  <!-- let email be there, some cts for BluetoothProfileTests failing.
+  <remove-project name="LineageOS/android_packages_apps_Email"/>
+  -->
+  <!-- use other calculator
+  <remove-project name="LineageOS/android_packages_apps_ExactCalculator"/>
+  -->
+  <!-- no audio fx -->
+  <remove-project name="LineageOS/android_packages_apps_AudioFX"/>
+  <!-- other music player -->
+  <remove-project name="LineageOS/android_packages_apps_Eleven"/>
+  <!-- we got a lot of browser, Browser app jelly not needed. -->
+  <remove-project name="LineageOS/android_packages_apps_Jelly"/>
+  <!-- use simple file manager -->
+  <remove-project name="LineageOS/android_packages_apps_DocumentsUI"/>
+
+<!-- remove other junk from aosp/lineage -->
+
+  <remove-project name="LineageOS/android_packages_apps_Updater" />
+
+</manifest>
