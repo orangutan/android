@@ -39,6 +39,9 @@
   <project path="vendor/motorola/sanders" name="orangutan/vendor_motorola_sanders" remote="github" revision="8.1" />
   <project path="kernel/motorola/msm8953" name="orangutan/kernel_motorola_msm8953_sanders" remote="github" revision="8.1-ods" />
 
+  <!-- our apps -->
+  <project path="packages/apps/my_apps" name="orangutan/packages_my_apps" remote="github" revision="master" />
+
   <!-- additional packages required. -->
 
   <project path="packages/resources/devicesettings" name="LineageOS/android_packages_resources_devicesettings" remote="github" revision="lineage-15.1" />
