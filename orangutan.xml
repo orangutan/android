@@ -35,9 +35,18 @@
   <project path="vendor/validus" name="ValidusOs/vendor_validus" remote="github" revision="8.1" />
   -->
 
+  <!--
   <project path="device/motorola/sanders" name="orangutan/device_motorola_sanders" remote="github" revision="8.1" />
   <project path="vendor/motorola/sanders" name="orangutan/vendor_motorola_sanders" remote="github" revision="8.1" />
   <project path="kernel/motorola/msm8953" name="orangutan/kernel_motorola_msm8953_sanders" remote="github" revision="8.1-ods" />
+  -->
+
+  <!-- asus pro m1 -->
+
+  <project name="LineageOS/android_device_asus_X00TD" path="device/asus/X00TD" remote="github" />
+  <project name="orangutan/android_kernel_asus_sdm660" path="kernel/asus/sdm660" remote="github" />
+  <project name="ShivamKumarJha/android_vendor_asus" path="vendor/asus" remote="github" revision="lineage-15.1" />
+
 
   <!-- our apps -->
   <project path="packages/apps/my_apps" name="orangutan/packages_my_apps" remote="github" revision="master" />
@@ -49,7 +58,9 @@
   <!-- lets try to build our own twrp recovery
   <remove-project name="LineageOS/android_bootable_recovery" />
   -->
+  <!--
   <project path="bootable/recovery-twrp" name="orangutan/android_bootable_recovery" remote="github" revision="android-8.1" />
+  -->
   
   <!-- add wireguard vpn support -->
   <remote name="zx2c4" fetch="https://git.zx2c4.com/" />
